@@ -5,13 +5,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
 
-    // Function to add a task
+    // Define the addTask function
     function addTask() {
-        const taskText = taskInput.value.trim(); // Get and trim the input value
+        // Retrieve and trim the value from the input field
+        const taskText = taskInput.value.trim(); 
 
+        // Check if taskText is not empty
         if (taskText === '') {
-            alert('Please enter a task.'); // Alert if input is empty
-            return;
+            alert('Please enter a task.'); // Prompt user to enter a task if input is empty
+            return; // Exit the function if input is empty
         }
 
         // Create new li element
@@ -25,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Add onclick event to remove button
         removeBtn.onclick = function() {
-            taskList.removeChild(li); // Remove the task
+            taskList.removeChild(li); // Remove the task when clicked
         };
 
         // Append button to li and li to taskList
@@ -43,4 +45,4 @@ document.addEventListener('DOMContentLoaded', function() {
             addTask(); // Add task on Enter key press
         }
     });
-}); 
+});
