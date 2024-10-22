@@ -2,16 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="dynamic-to-do-list-js\dynamic-to-do-list-js\style.css">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>To-Do List</h1>
-    <input type="text" id="task-input" placeholder="Enter a new task...">
-    <button id="add-task">Add Task</button>
-    <ul id="task-list"></ul>
+    <form id="registration-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
 
-    <script src="dynamic-to-do-list-js\dynamic-to-do-list-js\script.js"></script>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Register</button>
+        <div id="form-feedback"></div>
+    </form>
+    <script src="script.js"></script>
 </body>
 </html>
